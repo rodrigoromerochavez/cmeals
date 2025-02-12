@@ -4,15 +4,15 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var app\models\Meals $model */
+/** @var app\models\BusinessUnits $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
-<div class="meals-form">
+<div class="business-units-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'meal_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'business_name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 
@@ -21,7 +21,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'active')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Guardar'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Registrar'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

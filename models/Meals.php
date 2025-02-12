@@ -60,4 +60,9 @@ class Meals extends \yii\db\ActiveRecord
     {
         return $this->hasMany(ShiftMeal::class, ['meal_id' => 'meal_id']);
     }
+    public function saveAll(){
+        $this->created_at = date('Y-m-d');
+        $this->status = 1;
+        return $this->save();
+    }
 }

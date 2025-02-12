@@ -2,16 +2,16 @@
 
 namespace app\controllers;
 
-use app\models\Meals;
-use app\models\MealsSearch;
+use app\models\BusinessUnits;
+use app\models\BusinessUnitsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * MealsController implements the CRUD actions for Meals model.
+ * BusinessUnitsController implements the CRUD actions for BusinessUnits model.
  */
-class MealsController extends Controller
+class BusinessUnitsController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,13 +32,13 @@ class MealsController extends Controller
     }
 
     /**
-     * Lists all Meals models.
+     * Lists all BusinessUnits models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new MealsSearch();
+        $searchModel = new BusinessUnitsSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,30 +48,30 @@ class MealsController extends Controller
     }
 
     /**
-     * Displays a single Meals model.
-     * @param int $meal_id ID de la comida
+     * Displays a single BusinessUnits model.
+     * @param int $business_unit_id ID de la unidad de negocio
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($meal_id)
+    public function actionView($business_unit_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($meal_id),
+            'model' => $this->findModel($business_unit_id),
         ]);
     }
 
     /**
-     * Creates a new Meals model.
+     * Creates a new BusinessUnits model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Meals();
+        $model = new BusinessUnits();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->saveAll()) {
-                return $this->redirect(['view', 'meal_id' => $model->meal_id]);
+            if ($model->load($this->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'business_unit_id' => $model->business_unit_id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -83,18 +83,18 @@ class MealsController extends Controller
     }
 
     /**
-     * Updates an existing Meals model.
+     * Updates an existing BusinessUnits model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $meal_id ID de la comida
+     * @param int $business_unit_id ID de la unidad de negocio
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($meal_id)
+    public function actionUpdate($business_unit_id)
     {
-        $model = $this->findModel($meal_id);
+        $model = $this->findModel($business_unit_id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'meal_id' => $model->meal_id]);
+            return $this->redirect(['view', 'business_unit_id' => $model->business_unit_id]);
         }
 
         return $this->render('update', [
@@ -103,29 +103,29 @@ class MealsController extends Controller
     }
 
     /**
-     * Deletes an existing Meals model.
+     * Deletes an existing BusinessUnits model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $meal_id ID de la comida
+     * @param int $business_unit_id ID de la unidad de negocio
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($meal_id)
+    public function actionDelete($business_unit_id)
     {
-        $this->findModel($meal_id)->delete();
+        $this->findModel($business_unit_id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Meals model based on its primary key value.
+     * Finds the BusinessUnits model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $meal_id ID de la comida
-     * @return Meals the loaded model
+     * @param int $business_unit_id ID de la unidad de negocio
+     * @return BusinessUnits the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($meal_id)
+    protected function findModel($business_unit_id)
     {
-        if (($model = Meals::findOne(['meal_id' => $meal_id])) !== null) {
+        if (($model = BusinessUnits::findOne(['business_unit_id' => $business_unit_id])) !== null) {
             return $model;
         }
 

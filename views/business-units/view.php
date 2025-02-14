@@ -7,17 +7,17 @@ use yii\widgets\DetailView;
 /** @var app\models\BusinessUnits $model */
 
 $this->title = $model->business_unit_id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Business Units'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Centro de costos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="business-units-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h4><?= Html::encode($this->title) ?></h4>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'business_unit_id' => $model->business_unit_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'business_unit_id' => $model->business_unit_id], [
+        <?= Html::a(Yii::t('app', 'Actualizar'), ['update', 'business_unit_id' => $model->business_unit_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Borrar'), ['delete', 'business_unit_id' => $model->business_unit_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),

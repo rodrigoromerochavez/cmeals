@@ -10,12 +10,12 @@ use yii\grid\GridView;
 /** @var app\models\PeopleSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = Yii::t('app', 'Peoples');
+$this->title = Yii::t('app', 'Personas');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="people-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h4><?= Html::encode($this->title) ?></h4>
 
     <p>
         <?= Html::a(Yii::t('app', 'Create People'), ['create'], ['class' => 'btn btn-success']) ?>
@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'first_name',
             'last_name',
             'id_card',
+            'position.position_name',
             'position_id',
             //'created_at',
             //'status',

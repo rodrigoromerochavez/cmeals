@@ -48,7 +48,7 @@ class Positions extends \yii\db\ActiveRecord
         return [
             'position_id' => Yii::t('app', 'ID del cargo o posición'),
             'position_name' => Yii::t('app', 'Nombre del cargo o posición'),
-            'business_unit_id' => Yii::t('app', 'ID de la unidad de negocio'),
+            'business_unit_id' => Yii::t('app', 'ID Centro de Costos'),
             'created_at' => Yii::t('app', 'Fecha de creación del registro'),
             'status' => Yii::t('app', 'Estado del registro'),
             'active' => Yii::t('app', 'Registro activo o inactivo'),

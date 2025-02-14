@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\BusinessUnitsSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = Yii::t('app', 'Unidades de Negocios');
+$this->title = Yii::t('app', 'Centro de Costos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="business-units-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h4><?= Html::encode($this->title) ?></h4>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Registrar Unidad '), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Centro de Costos '), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'business_unit_id',
             'business_name',
+            'internal_code',
             'created_at',
             'status',
             'active',

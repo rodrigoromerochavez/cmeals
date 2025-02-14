@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\People $model */
 
-$this->title = Yii::t('app', 'Update People: {name}', [
+$this->title = Yii::t('app', 'Actualizar Persona: {name}', [
     'name' => $model->person_id,
 ]);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Peoples'), 'url' => ['index']];

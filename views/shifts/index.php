@@ -10,15 +10,15 @@ use yii\grid\GridView;
 /** @var app\models\ShiftsSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = Yii::t('app', 'Shifts');
+$this->title = Yii::t('app', 'Turnos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="shifts-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h4><?= Html::encode($this->title) ?></h4>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Shifts'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Crear Turno'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

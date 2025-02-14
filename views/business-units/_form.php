@@ -14,6 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'business_name')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'internal_code')->textInput() ?>
     <?= $form->field($model, 'created_at')->textInput() ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
